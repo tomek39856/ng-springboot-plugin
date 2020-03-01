@@ -1,0 +1,5 @@
+/build/pluginUnderTestMetadata/
+/.idea/
+/.gradle/
+/gradle/wrapper/
+/build/

@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id "com.gradle.plugin-publish" version "0.10.1"
+}
+
+group 'com.github.tomek39856'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+gradlePlugin {
+    plugins {
+        simplePlugin {
+            id = 'com.github.tomek39856.ngspringbootplugin'
+            implementationClass = 'com.github.tomek39856.gradle.plugin.npm2springboot.NgSpringBootPlugin'
+        }
+    }
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+}
+
+pluginBundle {
+    website = 'http://github.com/tomek39856'
+    vcsUrl = 'https://github.com/tomek39856/ng-springboot-plugin'
+    description = 'Plugin creates angular project and attaches it to spring boot resources'
+    tags = ['ng', 'angular', 'spring']
+
+    plugins {
+        greetingsPlugin {
+            displayName = 'Angular to Spring Boot plugin'
+        }
+    }
+}
