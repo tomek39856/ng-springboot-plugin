@@ -1,12 +1,10 @@
 package com.github.tomek39856.gradle.plugin.npm2springboot.task;
 
-import com.github.tomek39856.gradle.plugin.npm2springboot.extension.WebappBuildConfig;
 import org.gradle.api.tasks.Exec;
 import org.gradle.internal.os.OperatingSystem;
 
 import java.io.File;
 import java.util.List;
-import java.util.Optional;
 
 public abstract class AbstractNpmTask extends Exec implements ProjectDirectoryConfigurableWebappBuildTask {
   AbstractNpmTask(List<String> arguments) {

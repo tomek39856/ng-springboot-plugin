@@ -14,8 +14,8 @@ public class NpmBuildTask extends AbstractNpmTask {
 
   private void configureInputsAndOutputsForIncrementalBuild() {
     String projectDirectory = getProjectDirectory(getProject());
-    this.getInputs().file(new File(projectDirectory + "/package.json"));
-    this.getInputs().dir(projectDirectory + "/src");
-    this.getOutputs().dir(projectDirectory + "/dist");
+    this.getInputs().file(new File(projectDirectory + File.separator + "package.json"));
+    this.getInputs().dir(projectDirectory + File.separator + "src");
+    this.getOutputs().dir(projectDirectory + File.separator + "dist");
   }
 }
